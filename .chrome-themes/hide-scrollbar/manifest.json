@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Hide Scrollbar by jeffinshadow",
+  "version": "6",
+  "description": "Hide chrome scrollbars but don't disable scroll",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "content_scripts": [ {
+    "css": [ "scrollbars.css" ],
+    "matches": [ "<all_urls>" ],
+    "exclude_matches": [ "*://*.google.com/*/*" ]
+  } ]
+}

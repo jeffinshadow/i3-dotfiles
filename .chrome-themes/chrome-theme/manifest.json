@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Shadow-Materia Chrome/Chromium Theme",
+  "version": "9",
+  "description": "",
+  "theme": {
+    "images": {
+      "theme_toolbar": "theme_toolbar.png"
+    },
+    "colors": {
+      "frame": [24, 24, 24],
+      "frame_inactive": [32, 32, 32],
+      "frame_incognito": [24, 24, 24],
+      "frame_incognito_inactive": [32, 32, 32],
+      "toolbar": [24, 24, 24],
+      "tab_text": [255, 255, 255],
+      "tab_background_text": [255, 255, 255, 0.7],
+      "bookmark_text": [255, 255, 255],
+      "ntp_background": [24, 24, 24],
+      "ntp_text": [255, 255, 255],
+      "button_background": [0, 0, 0, 0]
+    },
+    "tints": {
+      "buttons": [-1, -1, 0.9]
+    }
+  }
+}
