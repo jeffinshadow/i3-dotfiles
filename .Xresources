@@ -1,0 +1,20 @@
+! Configuration
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintfull
+URxvt.termName: rxvt-256color
+URxvt.buffered: falseu
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: true
+URxvt.font: xft:Fura Code Nerd Font:pixelsize=11:regular
+!! colorscheme
+
+! special
+URxvt.foreground: #FFFFFF
+URxvt.background: #181818
+URxvt.title: urxvt
