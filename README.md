@@ -6,34 +6,35 @@
 
 # Main Software
 
-### [i3-wm](src=".config/i3/") + [polybar](src=".config/polybar/")
+### i3-wm + polybar
 <img src="readmepictures/i3polybar.png">
 
-### [rofi](src=".config/rofi/")
+### rofi
 <img src="readmepictures/rofi.png">
 
-### [URxvt](src=".Xresources")
+### URxvt
 <img src="readmepictures/urxvt.png">
 
 
 # Shadow-Materia Themes
 
-### [Shadow-Materia GTK Theme](src=".themes/")
+### Shadow-Materia GTK Theme
 <img src="readmepictures/shadowmateria.png">
 
 ### [Shadow-Materia Telegram Theme](https://t.me/addtheme/shadowmateria)
 <img src="readmepictures/telegramshadowmateria.png">
 
-### [Shadow-Materia Chrome Theme](src=".chrome-themes/")
+### Shadow-Materia Chrome Theme
 <img src="readmepictures/chromiumshadowmateria.png">
 
 
 # Other Themes
 
-### [GIMP Interface Layout](src=".config/GIMP/")
+### GIMP Interface Layout
+<img src="readmepictures/gimpsplash.png">
 <img src="readmepictures/gimp.png">
 
-### [CMUS Theme](src=".config/cmus/")
+### CMUS Theme
 <img src="readmepictures/cmus.png">
 
 
@@ -51,4 +52,4 @@
 | Wallpaper setter | nitrogen      |
 
 
-### You can download the wallpaper used in the configuration [here](src="Wallpapers").
+### You can download the wallpaper used in the configuration [here](https://github.com/jeffinshadow/i3-dotfiles/tree/master/Wallpapers).
