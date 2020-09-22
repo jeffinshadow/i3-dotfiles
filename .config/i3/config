@@ -1,0 +1,250 @@
+########################################
+#  _ _____                  __ _       #
+# (_)___ /  ___ ___  _ __  / _(_) __ _ #
+# | | |_ \ / __/ _ \| '_ \| |_| |/ _` |#
+# | |___) | (_| (_) | | | |  _| | (_| |#
+# |_|____/ \___\___/|_| |_|_| |_|\__, |#
+#                                |___/ #
+########################################
+#   By https://github.com/jeffinshadow   #
+########################################
+
+
+## i3 default keybinds ##
+
+# Set meta as modifier key
+set $mod Mod4
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start dmenu (a program launcher)
+# bindsym $mod+d exec dmenu_run
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+ccedilla focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+ccedilla move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+#switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym ccedilla resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+# enable resize mode
+bindsym $mod+r mode "resize"
+
+
+## Custom keybinds ##
+
+# Start rofi menu
+bindsym $mod+d exec --no-startup-id "rofi -show drun -disable-history -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
+
+# Take screenshots with scrot
+
+bindsym Print exec scrot -q 100 $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png && viewnior $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png # normal
+bindsym Control+Print exec scrot -ubq 100 $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png && viewnior $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png # focused window
+
+# another way to kill windows
+bindsym $mod+q kill
+
+
+## set applications to open in certain workspaces ##
+
+# Terminal on workscpace 1
+for_window [class="(URxvt)"] move to workspace $ws1
+
+# Chromium on workspace 2
+for_window [class="(Chromium)"] move to workspace $ws2
+
+# Telegram on workspace 3
+for_window [class="(Kotatogram)"] move to workspace $ws3
+
+# Whatsapp webapp on workspace 3
+for_window [title="(WhatsApp)"] move to workspace $ws3
+
+# Leafpad on workspace 4
+for_window [class="(Leafpad)"] move to workspace $ws4
+
+# GIMP on workspace 5
+for_window [class="(Gimp)"] move to workspace $ws5
+
+# Inkscape on workspace 5
+for_window [class="(Inkscape)"] move to workspace $ws5
+
+# CMUS on workspace 6
+for_window [title="(cmus v2.*)"] move to workspace $ws6
+
+# Nemo on workspace 7
+for_window [class="(Nemo)"] move to workspace $ws7
+
+# File-roller on workspace 7
+for_window [class="(File-roller)"] move to workspace $ws7
+
+# Evince on workspace 7
+for_window [class="(Evince)"] move to workspace $ws7
+
+# viewnior on workspace 8
+for_window [class="(Viewnior)"] move to workspace $ws8
+
+# VLC on workspace 9
+for_window [class="(VLC)"] move to workspace $ws9
+
+# Nitrogen on workspace 10
+for_window [class="(Nitrogen)"] move to workspace $ws10
+
+# Lxappareance on workspace 10
+for_window [class="(Lxappearance)"] move to workspace $ws10
+
+# Transmission on workspace 10
+for_window [class="(Transmission)"] move to workspace $ws10
+
+
+## Appearance settings ##
+
+# Set i3 font
+font pango:Ubuntu Nerd Font 10
+
+# Workspaces names
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:切"
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
+set $ws8 "8:"
+set $ws9 "9:嗢"
+set $ws10 "10:"
+
+# i3 colors
+# class                 border  backgr. text indicator child_border
+client.focused          #202020 #181818 #fffff #202020   #202020
+client.focused_inactive #202020 #181818 #ffffff #202020   #202020
+client.unfocused        #202020 #181818 #ffffff #202020   #202020
+client.urgent           #202020 #181818 #ffffff #202020   #202020
+client.placeholder      #202020 #181818 #ffffff #202020   #202020
+
+client.background       #202020
+
+# gaps settings
+for_window [class=".*"] border pixel 4
+gaps inner 12
+gaps outer 2
+
+# radius settings
+border_radius 6
+
+## Autostart Applications ##
+
+# xcompmgr
+exec_always --no-startup-id xcompmgr &
+
+# Polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Nitrogen
+exec_always --no-startup-id nitrogen --restore
