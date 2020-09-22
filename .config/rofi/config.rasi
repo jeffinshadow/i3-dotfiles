@@ -1,0 +1,6 @@
+configuration {
+show-icons: true;
+icon-theme: "Papirus-Dark";
+font: "Ubuntu 11";
+theme: "materia";
+}
