@@ -51,4 +51,4 @@
 | Wallpaper setter | nitrogen      |
 
 
-### You can download the wallpaper used in the configuration [here](src="Wallpapers").
+### You can download the wallpaper used in the configuration [here](src="Wallpapers/").
