@@ -4,7 +4,7 @@
   text-color: #ffffff;
   spacing: 0;
   width: 600px;
-  height:318px;
+  height:324px;
 }
 
 inputbar {
@@ -44,7 +44,7 @@ element selected {
 }
 window {
     padding:          5;
-    border:           2;
+    border:           5;
     border-radius:    12px;
     fullscreen:	      false;
 }
