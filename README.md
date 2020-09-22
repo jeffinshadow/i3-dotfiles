@@ -10,7 +10,7 @@
 <img src="readmepictures/i3polybar.png">
 
 ### rofi
-<img src="readmepictures/rofi.png">
+<img src="readmepictures/rofi\ .png">
 
 ### URxvt
 <img src="readmepictures/urxvt.png">
