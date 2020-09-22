@@ -145,8 +145,8 @@ bindsym $mod+d exec --no-startup-id "rofi -show drun -disable-history -run-shell
 
 # Take screenshots with scrot
 
-bindsym Print exec scrot -q 100 $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png && viewnior $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png # normal
-bindsym Control+Print exec scrot -ubq 100 $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png && viewnior $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png # focused window
+bindsym Print exec scrot $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png && viewnior $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png # normal
+bindsym Control+Print exec scrot -ub $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png && viewnior $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png # focused window
 
 # another way to kill windows
 bindsym $mod+q kill
