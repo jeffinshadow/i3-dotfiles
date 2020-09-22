@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=CMUS
+Comment=CLI Music Player
+Exec=urxvt -e cmus
+Icon=rhythmbox
+Terminal=false
