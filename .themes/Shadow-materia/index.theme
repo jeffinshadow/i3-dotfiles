@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Shadow-Materia
+Comment=A custom version of materia-gtk-theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Shadow-Materia
+IconTheme=Papirus-Dark
+CursorTheme=Adwaita
+CursorSize=24
