@@ -37,7 +37,7 @@
 <img src="readmepictures/cmus.png">
 
 
-# ***Used utilities:
+### Used utilities:
 | Types            | Programs      |
 | :--------------- | :------------ |   
 | Browser          | chromium      |
