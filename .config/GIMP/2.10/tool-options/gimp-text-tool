@@ -1,0 +1,11 @@
+# GIMP gimp-text-tool options
+
+(foreground (color-rgb 1 1 1))
+(palette "Standard")
+(font "Ubuntu")
+(font-size 22)
+(hint-style full)
+(justify right)
+(line-spacing 4)
+
+# end of gimp-text-tool options
