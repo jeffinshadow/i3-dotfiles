@@ -1,0 +1,156 @@
+######################################################################
+# ____       _       _                   ____             __ _       #
+#|  _ \ ___ | |_   _| |__   __ _ _ __   / ___|___  _ __  / _(_) __ _ #
+#| |_) / _ \| | | | | '_ \ / _` | '__| | |   / _ \| '_ \| |_| |/ _` |#
+#|  __/ (_) | | |_| | |_) | (_| | |    | |__| (_) | | | |  _| | (_| |#
+#|_|   \___/|_|\__, |_.__/ \__,_|_|     \____\___/|_| |_|_| |_|\__, |#
+#              |___/                                           |___/ #
+######################################################################
+#                 by https://github.com/jeffinshadow/                  #
+######################################################################
+
+#### bar config ####
+
+## top bar config ##
+
+[bar/shadbar]
+font-0 ="Ubuntu Nerd Font:pixelsize=10,0"
+background = #111111
+fixed-center = true
+padding-right = 1
+separator ="  "
+line-size = 1
+
+# top bar modules
+modules-left = title
+modules-right = wifi alsa backlight fake-battery
+modules-center = date
+
+
+## Bottom bar config ##
+
+[bar/shadbar2]
+font-0 ="Ubuntu Nerd Font:pixelsize=10,0"
+background = #111111
+fixed-center = true
+padding-right = 1
+separator ="  "
+line-size = 1
+bottom = true
+
+# bottom bar modules
+modules-left = i3
+modules-right = cpu memory filesystem temperature
+modules-center = cmus
+
+
+#### polybar modules ####
+
+[module/alsa]
+type = internal/alsa
+label-volume = "墳 %percentage%%"
+format-volume-underline = #feb54e
+label-muted = "ﱝ Muted"
+master-mixer = Master
+use-ui-max = true
+
+[module/backlight]
+type = internal/backlight
+card = acpi_video0
+format = " <label>"
+format-underline = #64d0e4
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format-prefix = " "
+format-underline = #fe3d02
+
+[module/date]
+type = internal/date
+label = "  %date%, %time%"
+date= "%a %d/%m"
+time = %H:%M
+
+[module/filesystem]
+type = internal/fs
+label-mounted = " %percentage_used%%"
+format-mounted-underline = #64d0e4
+fixed-values = true
+interval = 30
+mount-0 = /
+
+[module/i3]
+type = internal/i3
+index-sort = true
+enable-click = true
+enable-scroll = true
+pin-workspaces = true
+strip-wsnumbers = false
+reverse-scroll = false
+wrapping-scroll = false
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+fuzzy-match = true
+label-mode = %mode%
+label-focused = %name%
+label-focused-padding = 1
+label-urgent = %name%
+label-urgent-padding = 1
+label-unfocused = %name%
+label-unfocused-padding = 1
+label-focused-background = #333f44a3
+label-focused-underline = #4b54cd
+
+[module/memory]
+type = internal/memory
+label = "ﳔ %percentage_used%%"
+format-underline = #feb54e
+interval = 1
+
+[module/temperature]
+type = internal/temperature
+hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp1_input
+label =  %temperature-c%
+format-underline = #4b54cd
+thermal-zone = 0
+units = true
+interval = 1
+
+[module/title]
+type = internal/xwindow
+label-maxlen = 35
+label = "   %title%"
+label-empty = "   shadowbook"
+format-underline = #4b54cd
+
+[module/wifi]
+type = internal/network
+format-connected-underline = #fe3d02
+format-disconnected-underline = #fe3d02
+label-connected = "直 %essid%"
+label-disconnected = "直 OFF"
+interface = wlp18s0b1
+interval = 1.0
+
+
+#### custom modules ####
+
+[module/cmus]
+type = custom/script
+exec = sh $HOME/.config/polybar/cmus.sh
+click-left = cmus-remote --pause
+click-right = cmus-remote --stop
+exec-if = pgrep -x polybar
+label = "  %output%"
+interval = 1
+
+[module/fake-battery]
+type = custom/text
+click-left = systemctl reboot
+click-right = systemctl poweroff
+content = " 100%"
+content-underline = #4b54cd
+
+# this one only exists because I took the battery out 
+# of my notebook but I still wanted an indicator
