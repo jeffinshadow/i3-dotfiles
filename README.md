@@ -31,6 +31,7 @@
 # Other Themes
 
 ### [GIMP Interface Layout](src=".config/GIMP/")
+<img src="readmepictures/gimpsplash.png">
 <img src="readmepictures/gimp.png">
 
 ### [CMUS Theme](src=".config/cmus/")
