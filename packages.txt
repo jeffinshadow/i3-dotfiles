@@ -30,7 +30,7 @@ gvfs-mtp
 gzip
 haveged
 htop
-i3-gaps-rounded-git
+i3-gaps
 imagemagick
 inkscape
 intel-ucode
@@ -57,6 +57,7 @@ p7zip
 pacman
 papirus-icon-theme
 patch
+picom
 pkgconf
 polybar
 rofi-dmenu
@@ -79,7 +80,6 @@ wget
 which
 wireless_tools
 wpa_supplicant
-xcompmgr
 xdotool
 xf86-video-intel
 xorg-bdftopcf

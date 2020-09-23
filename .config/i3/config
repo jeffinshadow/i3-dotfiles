@@ -235,13 +235,10 @@ for_window [class=".*"] border pixel 4
 gaps inner 12
 gaps outer 2
 
-# radius settings
-border_radius 6
-
 ## Autostart Applications ##
 
-# xcompmgr
-exec_always --no-startup-id xcompmgr &
+# picom
+exec_always --no-startup-id compton &
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
