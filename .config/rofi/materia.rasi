@@ -3,8 +3,8 @@
   border-color: #202020;
   text-color: #ffffff;
   spacing: 0;
-  width: 600px;
-  height:324px;
+  width: 400px;
+  height:191px;
 }
 
 inputbar {
@@ -13,7 +13,7 @@ inputbar {
 }
 
 prompt {
-  padding: 16px;
+  padding: 8px;
   border: 0 1px 0 0;
 }
 
@@ -21,11 +21,11 @@ textbox {
   background-color: #181818;
   border: 0 0 1px 0;
   border-color: #202020;
-  padding: 8px 16px;
+  padding: 4px 8px;
 }
 
 entry {
-  padding: 16px;
+  padding: 8px;
 }
 
 listview {
@@ -36,7 +36,7 @@ listview {
 
 element {
   border: 0 0 1px 0;
-  padding: 16px;
+  padding: 8px;
 }
 
 element selected {
@@ -44,8 +44,7 @@ element selected {
 }
 window {
     padding:          5;
-    border:           5;
-    border-radius:    12px;
+    border:           4;
     fullscreen:	      false;
 }
 
