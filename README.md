@@ -2,7 +2,7 @@
 ###### "With wisdom comes the desire for simplicity.” - Brendon Burchard.
 <img src="readmepictures/welcome.png">
 
-![Distro](https://img.shields.io/badge/Distro-Arch%20Linux-blue) ![WM](https://img.shields.io/badge/WM-i3--gaps--rounded-orange) ![Bar](https://img.shields.io/badge/Bar-Polybar-yellowgreen) ![Menu](https://img.shields.io/badge/Menu-rofi-brightgreen) ![Terminal](https://img.shields.io/badge/Terminal-URxvt-red) ![License](https://img.shields.io/badge/Licence-GPL%20v3.0-green)
+![Distro](https://img.shields.io/badge/Distro-Arch%20Linux-blue) ![WM](https://img.shields.io/badge/WM-i3--gaps-orange) ![Bar](https://img.shields.io/badge/Bar-Polybar-yellowgreen) ![Menu](https://img.shields.io/badge/Menu-rofi-brightgreen) ![Terminal](https://img.shields.io/badge/Terminal-URxvt-red) ![License](https://img.shields.io/badge/Licence-GPL%20v3.0-green)
 
 # Main Software
 
@@ -42,7 +42,7 @@
 | Types            | Programs      |
 | :--------------- | :------------ |   
 | Browser          | chromium      |
-| Composer	   | xcompmgr      |
+| Composer	   | picom         |
 | File Explorer    | nemo          |                                            
 | GTK theme setter | lxappearance  |
 | Image viewer     | viewnior      |                                                                                         
