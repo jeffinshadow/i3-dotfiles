@@ -143,55 +143,51 @@ bindsym $mod+r mode "resize"
 # Start rofi menu
 bindsym $mod+d exec --no-startup-id "rofi -show drun -disable-history -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
 
-# Take screenshots with scrot
-
-bindsym Print exec scrot $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png && viewnior $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png # normal
-bindsym Control+Print exec scrot -ub $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png && viewnior $HOME/Pictures/Screenshots/shad_`date +%d%m%y_%H%M%S`.png # focused window
+# Take screenshots with flameshot
+bindsym Print exec --no-startup-id flameshot gui
 
 # another way to kill windows
 bindsym $mod+q kill
 
-
 ## set applications to open in certain workspaces ##
 
 # Terminal on workscpace 1
-for_window [class="(URxvt)"] move to workspace $ws1
+assign [class="URxvt"] $ws1
 
 # Chromium on workspace 2
-for_window [class="(Chromium)"] move to workspace $ws2
+assign [class="Chromium"] $ws2
 
 # Telegram on workspace 3
-for_window [class="(Kotatogram)"] move to workspace $ws3
-
-# Whatsapp webapp on workspace 3
-for_window [title="(WhatsApp)"] move to workspace $ws3
+assign [class="Telegram"] $ws3
 
 # Leafpad on workspace 4
-for_window [class="(Leafpad)"] move to workspace $ws4
+assign [class="Leafpad"] $ws4
 
 # GIMP on workspace 5
-for_window [class="(Gimp)"] move to workspace $ws5
+assign [class="Gimp"] $ws5
 
 # Inkscape on workspace 5
-for_window [class="(Inkscape)"] move to workspace $ws5
+assign [class="Inkscape"] $ws5
 
 # CMUS on workspace 6
 for_window [title="(cmus v2.*)"] move to workspace $ws6
 
 # Nemo on workspace 7
-for_window [class="(Nemo)"] move to workspace $ws7
+assign [class="Nemo"] $ws7
 
 # File-roller on workspace 7
-for_window [class="(File-roller)"] move to workspace $ws7
-
-# Evince on workspace 7
-for_window [class="(Evince)"] move to workspace $ws7
+assign [class="File-roller"] $ws7
 
 # viewnior on workspace 8
-for_window [class="(Viewnior)"] move to workspace $ws8
+assign [class="Viewnior"] $ws8
 
-# VLC on workspace 9
-for_window [class="(VLC)"] move to workspace $ws9
+# VLC on workspace 8
+assign [class="vlc"] $ws8
+
+# FreeOffice on workspace 9
+assign [class="pm"] $ws9
+assign [class="tm"] $ws9
+assign [class="pr"] $ws9
 
 # Nitrogen on workspace 10
 for_window [class="(Nitrogen)"] move to workspace $ws10
@@ -217,7 +213,7 @@ set $ws5 "5:"
 set $ws6 "6:"
 set $ws7 "7:"
 set $ws8 "8:"
-set $ws9 "9:嗢"
+set $ws9 "9:"
 set $ws10 "10:"
 
 # i3 colors
@@ -233,15 +229,15 @@ client.background       #202020
 # gaps settings
 for_window [class=".*"] border pixel 4
 gaps inner 12
-gaps outer 2
+gaps outer 1
 
 ## Autostart Applications ##
-
-# picom
-exec_always --no-startup-id compton &
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Nitrogen
 exec_always --no-startup-id nitrogen --restore
+
+# picom
+exec_always --no-startup-id picom &
