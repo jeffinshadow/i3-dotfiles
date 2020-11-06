@@ -18,3 +18,5 @@ URxvt.font: xft:Fura Code Nerd Font:pixelsize=11:regular
 URxvt.foreground: #FFFFFF
 URxvt.background: #181818
 URxvt.title: urxvt
+
+Xcursor.theme: Sweet-cursors
