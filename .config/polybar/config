@@ -15,7 +15,7 @@
 
 [bar/shadbar]
 font-0 ="Ubuntu Nerd Font:pixelsize=10,0"
-background = #111111
+background = #00000000
 fixed-center = true
 padding-right = 1
 separator ="  "
@@ -31,7 +31,7 @@ modules-center = date
 
 [bar/shadbar2]
 font-0 ="Ubuntu Nerd Font:pixelsize=10,0"
-background = #111111
+background = #00000000
 fixed-center = true
 padding-right = 1
 separator ="  "
@@ -111,7 +111,7 @@ interval = 1
 [module/temperature]
 type = internal/temperature
 hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp1_input
-label =  %temperature-c%
+label = %temperature-c%
 format-underline = #4b54cd
 thermal-zone = 0
 units = true
@@ -119,7 +119,7 @@ interval = 1
 
 [module/title]
 type = internal/xwindow
-label-maxlen = 35
+label-maxlen = 40
 label = "   %title%"
 label-empty = "   shadowbook"
 format-underline = #4b54cd
