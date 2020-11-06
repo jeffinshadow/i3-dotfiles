@@ -46,7 +46,7 @@
 | File Explorer    | nemo          |                                            
 | GTK theme setter | lxappearance  |
 | Image viewer     | viewnior      |                                                                                         
-| Print Screen     | scrot         |                                            
+| Print Screen     | flameshot     |                                            
 | Shell            | zsh           |                                                                           
 | Text editor      | vim, leafpad  |                                                                             
 | Wallpaper setter | nitrogen      |
