@@ -6,7 +6,7 @@
 #|_|   \___/|_|\__, |_.__/ \__,_|_|     \____\___/|_| |_|_| |_|\__, |#
 #              |___/                                           |___/ #
 ######################################################################
-#                 by https://github.com/jeffinshadow/                  #
+#                 by https://github.com/jeffinshadow/                #
 ######################################################################
 
 #### bar config ####
@@ -23,7 +23,7 @@ line-size = 1
 
 # top bar modules
 modules-left = title
-modules-right = wifi alsa backlight fake-battery
+modules-right = wifi alsa backlight user
 modules-center = date
 
 
@@ -40,7 +40,7 @@ bottom = true
 
 # bottom bar modules
 modules-left = i3
-modules-right = cpu memory filesystem temperature
+modules-right = cpu memory filesystem temperature fake-battery
 modules-center = cmus
 
 
@@ -135,6 +135,13 @@ interval = 1.0
 
 
 #### custom modules ####
+
+[module/user]
+type = custom/script
+exec = whoami
+exec-if = pgrep -x polybar
+label = "ףּ %output%"
+label-underline = #4b54cd
 
 [module/cmus]
 type = custom/script
