@@ -9,12 +9,14 @@
 ### i3-wm + polybar
 <img src="readmepictures/i3polybar.png">
 
-### rofi
-<img src="readmepictures/rofi.png">
-
 ### URxvt
 <img src="readmepictures/urxvt.png">
 
+### i3lock
+<img src="readmepictures/i3lock.png">
+
+### rofi
+<img src="readmepictures/rofi.png">
 
 # Shadow-Materia Themes
 
