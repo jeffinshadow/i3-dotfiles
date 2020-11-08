@@ -144,10 +144,14 @@ bindsym $mod+r mode "resize"
 bindsym $mod+d exec --no-startup-id "rofi -show drun -disable-history -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
 
 # Take screenshots with flameshot
-bindsym Print exec --no-startup-id flameshot gui
+bindsym Print exec --no-startup-id flameshot full -p ~/Pictures/Screenshots/
+bindsym Control+Print exec --no-startup-id flameshot gui
 
 # another way to kill windows
 bindsym $mod+q kill
+
+# lock screen
+bindsym $mod+x exec --no-startup-id $HOME/.config/i3lock/i3lock.sh
 
 ## set applications to open in certain workspaces ##
 
