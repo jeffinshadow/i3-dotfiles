@@ -49,7 +49,7 @@ modules-center = cmus
 [module/alsa]
 type = internal/alsa
 label-volume = "墳 %percentage%%"
-format-volume-underline = #feb54e
+format-volume-underline = #BE0A0A
 label-muted = "ﱝ Muted"
 master-mixer = Master
 use-ui-max = true
@@ -58,13 +58,13 @@ use-ui-max = true
 type = internal/backlight
 card = acpi_video0
 format = " <label>"
-format-underline = #64d0e4
+format-underline = #BE0A0A
 
 [module/cpu]
 type = internal/cpu
 interval = 0.5
 format-prefix = " "
-format-underline = #fe3d02
+format-underline = #BE0A0A
 
 [module/date]
 type = internal/date
@@ -75,7 +75,7 @@ time = %H:%M
 [module/filesystem]
 type = internal/fs
 label-mounted = " %percentage_used%%"
-format-mounted-underline = #64d0e4
+format-mounted-underline = #BE0A0A
 fixed-values = true
 interval = 30
 mount-0 = /
@@ -99,20 +99,20 @@ label-urgent = %name%
 label-urgent-padding = 1
 label-unfocused = %name%
 label-unfocused-padding = 1
-label-focused-background = #333f44a3
-label-focused-underline = #4b54cd
+label-focused-background = #33BE0A0A
+label-focused-underline = #BE0A0A
 
 [module/memory]
 type = internal/memory
 label = "ﳔ %percentage_used%%"
-format-underline = #feb54e
+format-underline = #BE0A0A
 interval = 1
 
 [module/temperature]
 type = internal/temperature
 hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp1_input
 label = %temperature-c%
-format-underline = #4b54cd
+format-underline = #BE0A0A
 thermal-zone = 0
 units = true
 interval = 1
@@ -122,12 +122,12 @@ type = internal/xwindow
 label-maxlen = 40
 label = "   %title%"
 label-empty = "   shadowbook"
-format-underline = #4b54cd
+format-underline = #BE0A0A
 
 [module/wifi]
 type = internal/network
-format-connected-underline = #fe3d02
-format-disconnected-underline = #fe3d02
+format-connected-underline = #BE0A0A
+format-disconnected-underline = #BE0A0A
 label-connected = "直 %essid%"
 label-disconnected = "直 OFF"
 interface = wlp18s0b1
@@ -141,7 +141,7 @@ type = custom/script
 exec = whoami
 exec-if = pgrep -x polybar
 label = "ףּ %output%"
-label-underline = #4b54cd
+label-underline = #BE0A0A
 
 [module/cmus]
 type = custom/script
@@ -157,7 +157,7 @@ type = custom/text
 click-left = systemctl reboot
 click-right = systemctl poweroff
 content = " 100%"
-content-underline = #4b54cd
+content-underline = #BE0A0A
 
 # this one only exists because I took the battery out 
 # of my notebook but I still wanted an indicator
