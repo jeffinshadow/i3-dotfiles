@@ -5,7 +5,6 @@
 export ZSH=$HOME/.oh-my-zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -106,6 +105,8 @@ alias rmo="sudo pacman -Rcns $(pacman -Qdtq)"
 alias sdc="yay -Sccc"
 alias sdv="sudo vim"
 alias sdf="neofetch"
+alias sdfc="neofetch --config $HOME/.config/neofetch/compact.conf"
+alias wifi="nmtui"
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
